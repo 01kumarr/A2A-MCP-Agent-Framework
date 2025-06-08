@@ -7,10 +7,14 @@ This project demonstrates a simple A2A (Agent-to-Agent) interaction using **Fast
 ## Project Structure
 Basic_A2A/
 │
+
 ├── client/
+
 │ └── poem_client.py # Client script to interact with the FastAPI agent server
+
 │
 └── server/
+
 └── poem_server.py # FastAPI server implementing the poem-writing agent
 
 ## Setup Instructions
@@ -22,16 +26,15 @@ Basic_A2A/
 
 ### Install Dependencies
 
-Run this command to install required packages:
+#### Run this command to install required packages:
 
-```bash
 pip install fastapi uvicorn requests
 
 Start the Server From the server directory, run uvicorn poem_server:app --reload --host 0.0.0.0 --port 8000
 
 In a separate terminal, from the client directory, run: python poem_client.py 
 
-Description
+### Description
 The server exposes two endpoints:
 
 /.well-known/agent.json — agent discovery endpoint providing metadata.
@@ -41,11 +44,11 @@ The server exposes two endpoints:
 The client discovers the agent, sends a poem request task, and displays the agent’s reply.
 
 
-Notes
+### Notes
 Ensure the server is running before starting the client.
 
 The poem is fixed in this example but can be extended or replaced in the server code.
 
-License
+### License
 This project is open source and free to use.
 
